@@ -1,0 +1,10 @@
+drop database if exists controlefinanceiro;
+create database controlefinanceiro;
+use controlefinanceiro;
+
+CREATE TABLE usuarios (id int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY comment 'Chave primaria.', login VARCHAR(30) NOT NULL, senha varchar(60) NOT NULL, nome varchar(50) NOT NULL, sexo int(1) NOT NULL comment '1. Feminino; 2. Masculino.', identidade varchar(20) COMMENT 'Apenas numeros.', cpf varchar(11) NOT NULL comment 'Apenas numeros', nascimento date NOT NULL, estado_civil int(1) NOT NULL comment '1. Solteiro; 2. Casado; 3. Separado; 4. Divorciado; 5. Viuvo; 6. Uniao estavel.', funcao_empresa varchar(40) NOT NULL, email varchar(50) NOT NULL, telefone varchar(8) NOT NULL COMMENT 'Apenas numeros.', perfil int(1) NOT NULL COMMENT '1. Padrao; 2. Administrador.', cad_usuario int(11) NOT NULL comment 'Id do usuario que efetuou o cadastro.', cad_datahora datetime NOT NULL COMMENT 'Data e hora de efetivacao do cadastro.', unique(login, identidade, cpf));
+
+CREATE TABLE receitas_despesas (id int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY comment 'Chave primaria.', nome varchar(50) NOT NULL comment 'Ex.: conta de telefone.', tipo int(1) NOT NULL comment '1. Receita; 2. Despesa.', classe int(1) NOT NULL comment '1. variavel; 2. Fixo.', mes_referencia int(2) NOT NULL comment 'Ex.: Janeiro.', datahora datetime NOT NULL, valor float NOT NULL, usuario int(11) NOT NULL comment 'Id do usuario a quem pertence.', descricao text comment 'Comentarios adicionais.');
+
+INSERT INTO usuarios (login, senha, nome, sexo, cpf, nascimento, estado_civil, funcao_empresa, email, telefone, perfil, cad_usuario, cad_datahora) values ('admin', md5('admin'), 'Administrador Padrao', 2, '00000000000', '2011-08-09', 1, 'Administracao', 'admin@minhaempresa.com.br', '00000000', 2, 1, '2016-09-08 13:25:25');
+	
