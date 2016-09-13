@@ -44,7 +44,7 @@ mysql_close($con );
 <body>
 	<center>
 		<img src="dinheiro.png" width="25%" height="30%"/>
-	<h1>$$$ Sistema de Controle de Financas $$$ </h1>
+	<h1> Sistema de Controle de Financas </h1>
 	<hr width="700px"/><br/>
 	<?php
 		echo "<p>".$msg." </p>";

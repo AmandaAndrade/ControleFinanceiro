@@ -40,8 +40,8 @@ switch ($perfil_usuario) {
 	<hr width="700px" />
 	<p>Favor, escolha a ação desejada: </p>
 	<b>Incluir: </b> <br />
-	<a href="receitas_despesas.php?t=1">Receitas </a> <br />
-	<a href="receitas_despesas.php?t=2">Despesas </a> <br /> <br />
+	<a href="addReceitasDespesas.php?t=1">Receitas </a> <br />
+	<a href="addReceitasDespesas.php?t=2">Despesas </a> <br /> <br />
 	<b>Visualizar: </b> <br />
 	Saldos Mensais: <a href="saldosMensais.php" >[Planilha]</a>
 	<br />
