@@ -1,8 +1,7 @@
 <?php
-include "valida_sessao.inc";
+include "valida_sessaoadmin.inc";
 include "conecta_banco.inc";
 $nome_usuario = $_SESSION["nome_usuario"];
-
 $resultado = mysql_query ("SELECT id FROM usuarios WHERE login='$nome_usuario'");
 $id = mysql_result($resultado,0,"id");
 mysql_close($con);
@@ -17,7 +16,7 @@ mysql_close($con);
 	<h1>Sistema de Controle de Finanças Empresarial </h1>
 	<hr width="700px"/><br/>
 	Formulário para cadastro de novo usuário (*obrigatório)<br/><br/>
-	<form method="post" action="salvar.php" name="cadUser">
+	<form method="post" action="saveUser.php" name="cadUser">
 		<table>
 			<tr>
 				<td width="130px">Login*: </td>

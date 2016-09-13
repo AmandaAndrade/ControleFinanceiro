@@ -43,15 +43,15 @@ switch ($perfil_usuario) {
 	<a href="receitas_despesas.php?t=1">Receitas </a> <br />
 	<a href="receitas_despesas.php?t=2">Despesas </a> <br /> <br />
 	<b>Visualizar: </b> <br />
-	Saldos Mensais: <a href="saldosMensaisPlan.php" >[Planilha]</a>
+	Saldos Mensais: <a href="saldosMensais.php" >[Planilha]</a>
 	<br />
 	<b>Excluir: </b> <br />
-	<a href="excluirReceitasDespesas.php">Receitas e Despesas </a> <br /> <br />
+	<a href="deleteReceitasDespesas.php">Receitas e Despesas </a> <br /> <br />
 	<?php
-	if ($perfil_usuario ==2){ ?>
+	if ($perfil_usuario == 2){ ?>
 			<b>Administração: </b> <br />
 				<a href="addUser.php">Adicionar usuários </a> <br />
-				<a href="delUser.php">Excluir usuários </a> <br /> <br />
+				<a href="deleteUser.php">Excluir usuários </a> <br /> <br />
 	<?php } ?>
 	</center >
  </form >
