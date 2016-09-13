@@ -31,14 +31,15 @@ mysql_close($con);
 		<?php
 		while($linha = mysql_fetch_array($resRecFix, MYSQL_ASSOC )){
 			echo "<tr>";
-			echo "<td align='left' width = '33%'>" . $linha["nome"] . "</td>";
+			echo "<td align='center' width = '33%'>" . $linha["nome"] . "</td>";
 			echo "<td align='center' width = '33%'>" . $linha["datahora"] . "</td>";
-			echo "<td align='right' width = '33%'>" . $linha["valor"] . "</td>";
+			echo "<td align='center' width = '33%'>" . $linha["valor"] . "</td>";
 			echo "</tr>";
 			// Incrementar o valor total
 			$recFixTotal = $recFixTotal + $linha["valor"]; } ?>
 		<tr>
-			<td width = "33%"></td><td align='right' width = "33%"><b>Total: </b></td>
+			<td width = "33%"></td><td align='center' width = "33%"><b>Total: </b></td>
+			<td align='center'> <?php echo $recFixTotal; ?> </td>
 		</tr>
 	</table><br>
 	Variáveis
@@ -47,14 +48,15 @@ mysql_close($con);
 		<?php
 		while($linha = mysql_fetch_array($resRecVar , MYSQL_ASSOC )){
 			echo "<tr>";
-			echo "<td align='left' width = '33%'>" . $linha["nome"] . "</td>";
+			echo "<td align='center' width = '33%'>" . $linha["nome"] . "</td>";
 			echo "<td align='center' width = '33%'>" . $linha["datahora"] . "</td>";
-			echo "<td align='right' width = '33%'>" . $linha["valor"] . "</td>";
+			echo "<td align='center' width = '33%'>" . $linha["valor"] . "</td>";
 			echo "</tr>";
 			// Incrementar o valor total
 			$recVarTotal = $recVarTotal + $linha["valor"]; } ?>
 		<tr>
 			<td width =33%></td><td align='right' width = "33%"><b>Total: </b></td>
+			<td align='center'> <?php echo $recVarTotal; ?> </td>
 		</tr>
 	</table><br/>
 	<hr width="700px"/>
@@ -65,14 +67,15 @@ mysql_close($con);
 		<?php
 		while($linha = mysql_fetch_array($resDesFix , MYSQL_ASSOC )){
 			echo "<tr>";
-			echo "<td align='left' width = '33%'>" . $linha["nome"] . "</td>";
+			echo "<td align='center' width = '33%'>" . $linha["nome"] . "</td>";
 			echo "<td align='center' width = '33%'>" . $linha["datahora"] . "</td>";
-			echo "<td align='right' width = '33%'>" . $linha["valor"] . "</td>";
+			echo "<td align='center' width = '33%'>" . $linha["valor"] . "</td>";
 			echo "</tr>";
 			// Incrementar o valor total
 			$desFixTotal = $desFixTotal + $linha["valor"]; } ?>
 		<tr>
 			<td width = "33%>"</td><td align='right' width = '33%'><b>Total: </b></td>
+			<td align='center'> <?php echo $desFixTotal; ?> </td>
 		</tr>
 	</table><br/>
 	Variáveis
@@ -88,7 +91,8 @@ mysql_close($con);
 			// Incrementar o valor total
 			$desVarTotal = $desVarTotal + $linha["valor"]; } ?>
 		<tr>
-			<td width =33%></td><td align='right' width = '33%'><b>Total: </b></td>
+			<td width ='33%'></td><td align='right' width = '33%'><b>Total: </b></td>
+			<td align='center'> <?php echo $desVarTotal; ?> </td>			
 		</tr>
 	</table><br/>
 	<b>SALDO </b>

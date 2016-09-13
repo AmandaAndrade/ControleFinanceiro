@@ -19,6 +19,7 @@ mysql_close($con);
 	<hr width="700px"/><br/>
 	<p>Favor, escolha o mês que deseja visualizar:
 		<select name="mes">
+			<option value="null">Escolha um mês</option>
 			<option value="1" onclick="javascript:document.fmes.submit ();">Janeiro</option>
 			<option value="2" onclick="javascript:document.fmes.submit ();">Fevereiro</option>
 			<option value="3" onclick="javascript:document.fmes.submit ();">Março </option>
