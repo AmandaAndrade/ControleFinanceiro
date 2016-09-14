@@ -1,3 +1,6 @@
+<html>
+<head>
+<meta charset="utf-8"></head>
 <?php
 include "conecta_banco.inc";
 if (isset($_GET['act']) == 'rem'){
@@ -7,6 +10,8 @@ if (isset($_GET['act']) == 'rem'){
 	echo "location.href='deleteReceitasDespesas.php'</script>";
 } else {
 	echo "Você não selecionou um dado válido!";
-	echo "<p align=\"left\"><a href =\"principal.php\">Voltar </a></p>";
+	echo "<p align=\"center\"><a href =\"principal.php\">Voltar</a></p>";	
 }
+
 ?>
+</html>

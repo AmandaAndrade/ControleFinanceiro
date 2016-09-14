@@ -2,7 +2,6 @@
 include "valida_sessao.inc";
 include "conecta_banco.inc";
 $nome_usuario = $_SESSION["nome_usuario"];
-
 $resultado = mysql_query ("SELECT id FROM usuarios WHERE login='$nome_usuario'");
 $id = mysql_result($resultado,0,"id");
 mysql_close($con);
@@ -21,18 +20,18 @@ switch ($t) {
 <html>
 <head>
 <meta charset="utf-8">
-<title>Controle de Finanças </title></head>
+<title>Controle de Finanças</title></head>
 <body>
 	<center>
 	<img src="dinheiro.png" width="15%"/>
-	<h1>Sistema de Controle de Finanças Empresarial </h1>
+	<h1>Sistema de Controle de Finanças Empresarial</h1>
 	<hr width="700px"/><br/>
 	Formulário para cadastro de <?php echo $tipo ?> (*obrigatório)<br/><br/>
 	<form method="post" action="saveReceitasDespesas.php" name='fCadRecDes'>
 		<table>
 			<tr>
 				<td width="130px">Nome*: </td >
-				<td width="200px"><input size="80" type="text" name="nome"></td >
+				<td width="200px"><input size="80" type="text" name="nome"></td>
 			</tr>
 			<tr>
 				<td width="130px">Classe*: </td>
@@ -61,7 +60,7 @@ switch ($t) {
 					</td>
 			</tr>
 			<tr>
-				<td width="130px">Valor* (R$): </td>
+				<td width="130px">Valor* (R$):</td>
 				<td width="200px">
 					<input size="10" type="text" name="valor"> (formato (xx.xx))
 				</td>
@@ -79,7 +78,7 @@ switch ($t) {
 				<td width="200px">
 					<input type="reset" value="Limpar">
 					<input type="submit" value="Salvar">
-					<input type="hidden" name="t" value=" <?php echo $t?>">
+					<input type="hidden" name="t" value="<?php echo $t?>">
 				</td>
 			</tr>
 		</table>

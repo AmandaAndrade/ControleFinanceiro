@@ -31,9 +31,9 @@ mysql_close($con);
 		} ?>
 	</table><br>
 	<tr>
-			<td><input type="button" value="Voltar" onClick="location.href='principal.php'"></td>
-			<td></td>
-		</tr>
+		<td><input type="button" value="Voltar" onClick="location.href='principal.php'"></td>
+		<td></td>
+	</tr>
 	
 
 </center>

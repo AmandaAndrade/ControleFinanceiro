@@ -23,7 +23,7 @@ mysql_close($con);
 	<center>
 	<img src="dinheiro.png" width="15%"/>
 	<h1>Sistema de Controle de Finanças Empresarial </h1>
-	<hr width="700px"/><br/>
+	<hr width="700px"/>
 	<b>Lista de RECEITAS - Mês de <?php echo $meses[$mes -1]?></b><br><br>Fixas
 	<hr width="700px"/>
 	<table width = "700px" border = "0px">
@@ -55,7 +55,7 @@ mysql_close($con);
 			// Incrementar o valor total
 			$recVarTotal = $recVarTotal + $linha["valor"]; } ?>
 		<tr>
-			<td width ='33%'></td><td align='right' width = "33%"><b>Total: </b></td>
+			<td width ='33%'></td><td align='center' width = "33%"><b>Total: </b></td>
 			<td align='center'> <?php echo $recVarTotal; ?> </td>
 		</tr>
 	</table><br/>
@@ -74,13 +74,13 @@ mysql_close($con);
 			// Incrementar o valor total
 			$desFixTotal = $desFixTotal + $linha["valor"]; } ?>
 		<tr>
-			<td width = "33%>"</td><td align='right' width = '33%'><b>Total: </b></td>
+			<td width = "33%"></td><td align='center' width = '33%'><b>Total: </b></td>
 			<td align='center'> <?php echo $desFixTotal; ?> </td>
 		</tr>
 	</table><br/>
 	Variáveis
 	<hr width="700px" />
-	<table width =700 px border =0px >
+	<table width = "700px" border = "0px">
 		<?php
 		while($linha = mysql_fetch_array($resDesVar , MYSQL_ASSOC )){
 			echo "<tr>";
@@ -91,7 +91,7 @@ mysql_close($con);
 			// Incrementar o valor total
 			$desVarTotal = $desVarTotal + $linha["valor"]; } ?>
 		<tr>
-			<td width ='33%'></td><td align='right' width = '33%'><b>Total: </b></td>
+			<td width ='33%'></td><td align='center' width = '33%'><b>Total: </b></td>
 			<td align='center'> <?php echo $desVarTotal; ?> </td>			
 		</tr>
 	</table><br/>
